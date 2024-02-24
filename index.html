@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Somnang - Lucky</title>
@@ -7,13 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="base.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="background.js"></script>
 </head>
 
-<body>
+<body onresize="resizeCanvas(event)">
+    <canvas id="bgAnimation"></canvas>
     <div id="content">
+        <img src="lucky.jpg" alt="lucky" title="lucky" />
         <div id="clock">
-            <img src="lucky.jpg" alt="lucky" title="lucky" />
-            <br/><br/>
+            <br /><br />
             <p class="date">{{ date }}</p>
             <p class="time">{{ time }}</p>
         </div>
@@ -21,6 +24,7 @@
             <p>{{ greet }}</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="content.js"></script>
 </body>
+
 </html>

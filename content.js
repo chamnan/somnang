@@ -1,25 +1,26 @@
-var clock = new Vue({
+let clock = new Vue({
     el: '#clock',
     data: {
         time: '',
         date: ''
     }
 });
-var greeting = new Vue({
+let greeting = new Vue({
     el: '#greeting',
     data: { greet: ''}
 });
 
-var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+let week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+
 setInterval(updateContent, 1000);
 updateContent();
 
 function updateContent() {
-    var cd = new Date();            
+    let cd = new Date();            
     clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
     
-    var hours = cd.getHours();            
+    let hours = cd.getHours();            
     if (hours < 12)
         greeting.greet = 'Good Morning';
     else if (hours >= 12 && hours <= 17)
@@ -29,8 +30,8 @@ function updateContent() {
 };
 
 function zeroPadding(num, digit) {
-    var zero = '';
-    for (var i = 0; i < digit; i++) {
+    let zero = '';
+    for (let i = 0; i < digit; i++) {
         zero += '0';
     }
     return (zero + num).slice(-digit);

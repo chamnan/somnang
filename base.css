@@ -1,6 +1,12 @@
-html,
-body {
+html,body,
+canvas {
+    position: absolute;
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f6f7f7;
+    background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
 }
 
 body {
@@ -26,9 +32,11 @@ p {
     text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
 
-#clock img{
+#content img{    
     width: 350px;
-    height: 350px; 
+    height: 350px;
+    border-radius: 2%;
+    box-shadow: 0 0 15px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
 
 #clock .time {
