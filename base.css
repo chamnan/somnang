@@ -33,15 +33,15 @@ p {
 }
 
 #content img{    
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 2%;
     box-shadow: 0 0 15px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
 
 #clock .time {
     letter-spacing: 0.05em;
-    font-size: 60px;
+    font-size: 40px;
     padding: 5px 0;
 }
 
@@ -58,6 +58,6 @@ p {
 
 #greeting p {
     letter-spacing: 0.05em;
-    font-size: 60px;
+    font-size: 40px;
     padding: 5px 0;
 }
